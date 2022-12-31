@@ -243,6 +243,9 @@ pub mod mysql;
 pub mod pg;
 #[cfg(feature = "sqlite")]
 pub mod sqlite;
+// https://github.com/diesel-rs/diesel/pull/1640/files
+#[cfg(feature = "sqlite")]
+pub extern crate libsqlite3_sys;
 
 mod type_impls;
 mod util;
